@@ -1,0 +1,348 @@
+@import "variables";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $light-color;
+  font-family: "PrepHoopsAvantGardeBold", sans-serif;
+}
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+li {
+  outline: none;
+  border: none;
+  list-style: none;
+  transition: all ease 0.3s;
+  z-index: 10000;
+}
+a, Link {
+  text-decoration: none;
+  color: $dark-color;
+  text-align: left;
+  font-size: 21px;
+  font-family: "PrepHoopsAvantGardeBold", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+header {
+  height: 60px;
+  background: $primary-color;
+  .menuIcon {
+    height: 60px;
+  }
+  .hamburgerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .mobileHeader {
+    transform: translateX(-100%);
+    transition: all ease 0.3s;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    .logoContainer {
+      padding: 20px 24px;
+      align-items: center;
+      display: flex;
+    }
+    .closeMenuBtn {
+      align-items: center;
+      display: flex;
+      height: 60px;
+    }
+  }
+  // Desktop Navigation
+  nav {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all ease 0.2s;
+    flex-direction: column;
+    justify-content: start;
+    .logoContainer {
+      display: none;
+    }
+    ul {
+      flex-direction: column;
+      height: 100%;
+      width: 300px;
+      z-index: 10000;
+      li {
+        padding: 12px 24px;
+        background: $light-color;
+        height: 48px;
+        display: flex;
+        justify-content: start;
+        &:hover {
+          background: $gray-color;
+          cursor: pointer;
+        }
+        &.subMenuOutter {
+          height: 100%;
+          padding: 12px 0 0 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          width: 100%;
+          li:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .chevronContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 12px 24px;
+    .chevronIcon {
+      height: 24px;
+      width: auto;
+      transition: all ease 0.3s;
+      filter: invert(61%) sepia(98%) saturate(4421%) hue-rotate(353deg)
+        brightness(101%) contrast(94%);
+      &:active,
+      &:focus {
+        transform: rotate(180deg);
+      }
+    }
+    .rotateIcon {
+      transform: rotate(180deg);
+    }
+  }
+  .displayNone {
+    display: none;
+  }
+  .displayFlex {
+    display: flex;
+  }
+  .subMenu {
+    justify-content: start;
+    transition: all ease 0.3s;
+    a.subMenuItem {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
+.logoImg {
+  width: 50px;
+  height: 20px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 72px;
+    a, Link {
+      color: $light-color;
+    }
+    nav {
+      top: 0;
+      height: 72px;
+      width: 100vw;
+      transform: translateX(0);
+      flex-direction: row;
+      justify-content: start;
+      .logoContainer {
+        display: flex;
+        width: 123px;
+        align-items: center;
+        justify-content: center;
+        .logoImg {
+          width: 75px;
+          height: 36px;
+        }
+      }
+      ul {
+        display: flex;
+        height: 72px;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        li {
+          color: $light-color;
+          padding: 12px 24px;
+          background: none;
+          height: 48px;
+          display: flex;
+          justify-content: start;
+          z-index: 10000;
+          a, Link {
+            z-index: 10000;
+            transition: 0.2s;
+          }
+          &:hover {
+            background: $light-color;
+            color: $dark-color;
+            cursor: pointer;
+            a, Link {
+              color: $dark-color;
+            }
+          }
+          &.subMenuOutter {
+            position: relative;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            li:last-child {
+              padding-bottom: 0;
+            }
+            .subMenu {
+              position: absolute;
+              top: 72px;
+              justify-content: start;
+              flex-direction: column;
+              overflow: auto;
+              transition: all ease 0.3s;
+              z-index: 10000;
+              a.subMenuItem {
+                font-size: 16px;
+                font-weight: 300;
+                z-index: 10000;
+              }
+            }
+          }
+          &.noDropDown {
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            li:last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+
+        .chevronContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 0;
+          .chevronIcon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+// * ////////////////////// Hero Img Styles ////////////////////////////
+.bgContainer {
+  background: $light-color;
+  position: relative;
+  z-index: -10000;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+  }
+  .h1Container_desktop {
+    display: none;
+  }
+  .bgImage {
+    height: auto;
+    width: 100vw;
+  }
+  @media only screen and (min-width: 768px) {
+    .h1Container_desktop {
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -132px;
+      left: 50%;
+      margin-left: -361.5px;
+      z-index: 100;
+    }
+  }
+  @media only screen and (min-width: 1224px) {
+    .h1Container_desktop {
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -134px;
+      left: 50%;
+      margin-left: -550px;
+      z-index: 100;
+    }
+  }
+}
+// * /////////////////////// Body Text Container Styles //////////////////////
+h1 {
+  font-size: 2.75rem;
+  line-height: 48px;
+  font-family: "PrepHoopsAvantGardeBold";
+  color: $dark-color;
+  text-align: left;
+  @media only screen and (min-width: 768px) {
+    font-size: 5rem;
+    line-height: 132px;
+    color: $light-color;
+  }
+  @media only screen and (min-width: 1224px) {
+    font-size: 7.5rem;
+    line-height: 132px;
+    color: $light-color;
+  }
+}
+
+.container-fluid {
+  background: $light-color;
+  height: 100%;
+  .h1Container {
+    padding: 50px 24px;
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .pContainer {
+    padding: 0 24px;
+    p {
+      font-size: 0.875rem;
+      padding-top: 0;
+      line-height: 2;
+      font-family: "Galaxie";
+      color: $dark-color;
+      @media only screen and (min-width: 768px) {
+        font-size: 1.5rem;
+        padding-top: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+   "items": [
+      {
+         "label": "About",
+         "url": "#/about",
+         "items": [
+            {
+               "label": "What we do",
+               "url": "#/about/what-we-do"
+            },
+            {
+               "label": "How we work",
+               "url": "#/about/how-we-work"
+            },
+            {
+               "label": "Leadership",
+               "url": "#/about/leadership"
+            }
+         ]
+      },
+      {
+         "label": "Careers",
+         "url": "#/careers",
+         "items": [
+            {
+               "label": "Client Services",
+               "url": "#/careers/client-services"
+            },
+            {
+               "label": "Motion & Media",
+               "url": "#/careers/motion-and-media"
+            },
+            {
+               "label": "Operations",
+               "url": "#/careers/operations"
+            },
+            {
+               "label": "People",
+               "url": "#/careers/people"
+            },
+            {
+               "label": "Technology",
+               "url": "#/careers/technology"
+            },
+            {
+               "label": "UX & Product Design",
+               "url": "#/careers/ux-and-product-design"
+            }
+         ]
+      },
+      {
+         "label": "Recruit Me",
+         "url": "#/recruit-me",
+         "items": [
+            {
+               "label": "Reports",
+               "url": "#/ideas/reports"
+            },
+            {
+               "label": "Perspectives",
+               "url": "#/ideas/perspectives"
+            },
+            {
+               "label": "Books",
+               "url": "#/ideas/books"
+            },
+            {
+               "label": "Videos",
+               "url": "#/ideas/videos"
+            }
+         ]
+      },
+      {
+         "label": "News",
+         "url": "/news",
+         "items": []
+      },
+      {
+         "label": "Events",
+         "url": "/events",
+         "items": []
+      },
+      {
+         "label": "Contact",
+         "url": "#/contact",
+         "items": [
+            {
+               "label": "Minneapolis",
+               "url": "#/contact/atlanta"
+            },
+            {
+               "label": "Denver",
+               "url": "#/contact/brooklyn"
+            },
+            {
+               "label": "Houston",
+               "url": "#/contact/dc"
+            },
+            {
+               "label": "Maple Grove",
+               "url": "#/contact/london"
+            },
+            {
+               "label": "Los Angeles",
+               "url": "#/contact/los-angeles"
+            }
+         ]
+      }
+   ]
+}
